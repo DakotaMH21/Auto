@@ -4,7 +4,7 @@
 
     $name = filter_input(INPUT_POST, 'name');
     $car = filter_input(INPUT_POST, 'car');
-    $email = filter_input(INPUT_POST, 'email', FILER_VALIDATE_EMAIL);
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $comment = filter_input(INPUT_POST, 'comment');
     $id = null;
     $id = filter_input(INPUT_POST, 'USERID');
