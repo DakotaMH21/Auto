@@ -12,7 +12,7 @@ if(!empty($_GET['id']) && (is_numeric($_GET['id']))) {
      
     require('connect.php'); 
      
-    $sql = "SELECT * FROM songs WHERE USERID = :USERID;"; 
+    $sql = "SELECT * FROM auto WHERE USERID = :USERID;"; 
     
     $statement = $db->prepare($sql); 
      

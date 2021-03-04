@@ -7,15 +7,23 @@
 
     $statement->execute(); 
  
-    $records = $statement->fetchAll();
+    $comments = $statement->fetchAll();
      
     echo "<table class='table table-striped'><tbody>"; 
 
-    foreach($records as $record) {
-        echo "<tr><td>" . $record['name'] . "</td><td>" . $record['car'] . "</td><td>" . $record['email'] . "</td><td>". $record['comment'] . "</td>
-        <td><a href='delete.php?id=". $record['user_id'] . "'> Delete Comment </a>
+    foreach($comments as $comment) {
+        echo 
+        "<tr>
+            <td>" . $comment['name'] . "</td>
+            <td>" . $comment['car'] . "</td>
+            <td>" . $comment['email'] . "</td>
+            <td>" . $comment['comment'] . "</td>
+        <td>
+            <a href='delete.php?id=". $comment['user_id'] . "'> Delete Comment </a>
         </td>
-        <td><a href='index.php?id=". record['USERID']."'> Edit Comment </a> </td>
+        <td>
+            <a href='index.php?id=". $comment['USERID']."'> Edit Comment </a> 
+        </td>
         </tr>";
     }
 
